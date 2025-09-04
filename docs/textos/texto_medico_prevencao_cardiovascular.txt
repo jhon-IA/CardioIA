@@ -1,0 +1,10 @@
+Prevenção cardiovascular: fatores de risco e ações essenciais.
+
+A doença cardiovascular (DCV) é multifatorial. Entre os fatores de risco modificáveis, destacam-se
+hipertensão arterial, dislipidemia, diabetes mellitus, tabagismo, sedentarismo, obesidade e dieta
+de baixa qualidade. O controle pressórico e lipídico (sobretudo LDL-c), a cessação do tabagismo,
+a adoção de atividade física regular e a abordagem do diabetes com metas individualizadas reduzem
+eventos como infarto e AVC. Na prática, educação em saúde, adesão terapêutica e monitoramento
+contínuo são pilares. Este texto pode ser usado para NLP em tarefas como extração de entidades
+(sintomas, fatores de risco), classificação de tópicos (prevenção, diagnóstico, tratamento) e
+resumo automático para materiais de educação em saúde.
