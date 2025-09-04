@@ -1,6 +1,6 @@
-# CardioIA — meu pacote de dados para IA cardiovascular
+# CardioIA: meu pacote de dados para uso de IA em análises cardiovascular
 
-Reuni um conjunto **coeso e utilizável** de dados **numéricos**, **textuais** e **visuais** para sustentar experimentos de IA em saúde cardiovascular. A ideia é simples: criar uma base que permita **explorar, comparar e evoluir** modelos de forma ágil nas próximas fases do projeto.
+Reuni um conjunto **simples e utilizável** de dados **numéricos**, **textuais** e **visuais** para sustentar experimentos de IA em saúde cardiovascular. A ideia é simples: criar uma base que permita **explorar, comparar e evoluir** modelos de forma ágil nas próximas fases do projeto.
 
 > **Pasta pública (Drive) com CSV, textos `.txt` e a coleção de ≥100 imagens:**  
 > **https://drive.google.com/drive/folders/1RBI40cvqwsdEIZf81J9TRNCqQNq3_6Sg?usp=drive_link**
@@ -17,32 +17,18 @@ Juntas, elas formam um **laboratório completo**: consigo testar ideias em paral
 
 ---
 
-## Arquitetura (visão de trabalho)
-
-```mermaid
-flowchart LR
-  A[Dados Numéricos (CSV)] --> B[EDA + Modelos Clássicos]
-  C[Textos (.txt)] --> D[NLP: NER, Tópicos, Sentimentos]
-  E[Imagens (Drive)] --> F[VC: Detecção/Segmentação/Classificação]
-  B --> G[Comparações & Insights]
-  D --> G
-  F --> G
-```
-
----
-
-## Parte 1 — Dados numéricos (IoT/Clínico)
+## Parte 1: Dados numéricos (IoT/Clínico)
 
 - **O que eu preparei**: `data/dados_cardio_limpo.csv` (300 linhas, **simulado**), espelhando variáveis que realmente aparecem em estudos clínicos.
 - **Link público (Drive)**: mesmo link acima.
 - **Variáveis-chave e por quê**:
-  - **idade** e **sexo** — o risco e a apresentação clínica variam entre faixas etárias e entre homens/mulheres.  
+  - **idade** e **sexo** o risco e a apresentação clínica variam entre faixas etárias e entre homens/mulheres.  
   - **pressao_arterial_repouso** e **colesterol** — fatores centrais para risco de DAC/AVC (hipertensão e dislipidemia).  
-  - **frequencia_cardiaca_max** — proxy de condicionamento/carga hemodinâmica.  
-  - **tipo_dor_peito (TA/ATA/NAP/ASY)** — aproxima a probabilidade pré-teste de coronariopatia.  
-  - **glicemia_jejum** — diabetes/pré-diabetes aumentam risco.  
-  - **ecg_repouso, angina_exercicio, depressao_st, inclinacao_st** — adicionam sinal clínico relevante.  
-  - **doenca_cardiaca (alvo)** — rótulo binário para treino e avaliação.
+  - **frequencia_cardiaca_max** proxy de condicionamento/carga hemodinâmica.  
+  - **tipo_dor_peito (TA/ATA/NAP/ASY)** aproxima a probabilidade pré-teste de coronariopatia.  
+  - **glicemia_jejum** diabetes/pré-diabetes aumentam risco.  
+  - **ecg_repouso, angina_exercicio, depressao_st, inclinacao_st** adicionam sinal clínico relevante.  
+  - **doenca_cardiaca (alvo)** rótulo binário para treino e avaliação.
 - **Como vou usar**: EDA, modelos de classificação, calibração de probabilidade e explicabilidade (ex.: SHAP).
 
 > **Mapa rápido do “tipo_dor_peito”**  
@@ -50,7 +36,7 @@ flowchart LR
 
 ---
 
-## Parte 2 — Textos (NLP)
+## Parte 2: Textos (NLP)
 
 - **Onde estão**: `docs/textos/` neste repositório e também no Drive.  
 - **Como pretendo explorar**:
@@ -62,7 +48,7 @@ flowchart LR
 
 ---
 
-## Parte 3 — Imagens (Visão Computacional)
+## Parte 3: Imagens (Visão Computacional)
 
 - **Coleção (≥100 imagens)**: ECGs/angiogramas/RX torácico **hospedados no Drive** (link acima).  
 - **O que vou testar**:
@@ -80,9 +66,9 @@ flowchart LR
 
 ---
 
-## Governança, privacidade e viés — meu compromisso
+## Governança, privacidade e viés
 
-- **Licenças & créditos**: uso somente material autorizado e mantenho referências.  
+- **Licenças & créditos**: uso somente material autorizado e mantive referências
 - **Privacidade**: dados numéricos **simulados/anonimizados**; sem atributos identificáveis.  
 - **Viés**: monitoro distribuição por **sexo/idade** e verifico paridade de desempenho entre subgrupos.  
 - **Rastreabilidade**: documento origem, datas/versões e transformações aplicadas.
@@ -102,4 +88,4 @@ flowchart LR
       └─ texto_literario_coracao.txt
 ```
 
-Se o professor quiser conferir os insumos brutos (CSV completo, textos e a coleção de imagens), **está tudo no Drive do link acima**. A partir daqui, sigo para os experimentos de IA com base nesse pacote.
+Dados completos e insumos (CSV completo, textos e a coleção de imagens), **está tudo no Drive do link acima**.
